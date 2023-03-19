@@ -1,0 +1,817 @@
+@charset "UTF-8";
+
+$main-b: #000083;
+$main-f: #333;
+$main-g: #f2f3f2;
+
+$pc-l: 1280px;
+$pc: 1024px;
+$tab: 768px;
+@mixin tab {
+  @media (min-width: ($tab)) {
+    @content;
+  }
+}
+@mixin pc {
+  @media (min-width: ($pc)) {
+    @content;
+  }
+}
+@mixin pc-l {
+  @media (min-width: ($pc-l)) {
+    @content;
+  }
+}
+
+/* ここから共通 */
+body {
+  font-family: "Roboto", "游ゴシック体", sans-serif;
+  max-width: 100%;
+  width: 100%;
+  font-weight: bold;
+  color: #333;
+  margin: 0 auto;
+  .fadein {
+    opacity: 0.1;
+    transform: translate(0, 50px);
+    transition: all 500ms;
+    @include pc {
+      transition: 600ms;
+    }
+    &:nth-of-type(2) {
+      transition-delay: 200ms;
+    }
+    &:nth-of-type(3) {
+      transition-delay: 400ms;
+    }
+  }
+  .fadein.scrollin {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.9;
+  font-family: "游ゴシック体", sans-serif;
+  @include tab {
+    font-size: 16px;
+  }
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 22px;
+  @include tab {
+    font-size: 28px;
+  }
+  @include pc {
+    font-size: 36px;
+  }
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  line-height: 1;
+  color: #1a0dab;
+  @include tab {
+    font-size: 16px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  height: auto;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 32px 0 52px;
+  @include pc {
+    padding: 80px 0 120px;
+  }
+  .section-title {
+    text-align: center;
+    margin-bottom: 70px;
+    font-size: 40px;
+    line-height: 1;
+    color: $main-g;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 1);
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    position: relative;
+    &::before {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $main-b;
+      z-index: -1;
+    }
+    @include tab {
+      font-size: 56px;
+    }
+    @include pc {
+      font-size: 82px;
+      margin-bottom: 140px;
+    }
+    .section-sub-title {
+      font-family: "游ゴシック体", sans-serif;
+      color: #000;
+      position: absolute;
+      left: 50%;
+      bottom: -8px;
+      transform: translateX(-50%);
+      text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+      font-size: 16px;
+      display: block;
+      @include tab {
+        font-size: 22px;
+        bottom: -16px;
+      }
+      @include pc {
+        font-size: 28px;
+      }
+    }
+  }
+}
+/* ここまで共通 */
+
+header {
+  position: relative;
+  .hero {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 0;
+    padding-top: 75%;
+    @include tab {
+      padding-top: 50.78125%;
+    }
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      animation: anime 24s 0s infinite;
+      opacity: 0;
+      &:nth-of-type(1) {
+        background-image: url(../img/nature-g06d6e3a59_1920.jpg);
+      }
+      &:nth-of-type(2) {
+        background-image: url(../img/tree-g920baba1f_1920.jpg);
+        animation-delay: 6s;
+      }
+      &:nth-of-type(3) {
+        background-image: url(../img/maple-g5e19bcc8b_1920.jpg);
+        animation-delay: 12s;
+      }
+      &:nth-of-type(4) {
+        background-image: url(../img/ice-cream-g33630c228_1920.jpg);
+        animation-delay: 18s;
+      }
+    }
+    @keyframes anime {
+      0% {
+        opacity: 0;
+      }
+
+      12.5% {
+        opacity: 1;
+      }
+      25% {
+        opacity: 1;
+      }
+
+      37.5% {
+        opacity: 0;
+        transform: scale(1.15);
+        z-index: -1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    .header-inner {
+      background-color: transparent;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+      transition: 0.8s;
+      @include tab {
+        height: 80px;
+      }
+
+      &.transform {
+        background-color: $main-b;
+      }
+      a {
+        color: #fff;
+      }
+      .container {
+        display: flex;
+        margin: auto;
+        padding: 0 20px;
+        height: 60px;
+        align-items: center;
+        @include tab {
+          height: 80px;
+        }
+        @include pc-l {
+          width: 100%;
+          max-width: 100%;
+          padding: 0 12.5%;
+        }
+      }
+      .header-logo a {
+        font-family: "Oswald", sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        @include tab {
+          font-size: 28px;
+        }
+        @include pc {
+          font-size: 36px;
+        }
+      }
+
+      .pc-nav {
+        display: none;
+        @include tab {
+          display: block;
+          margin-left: auto;
+        }
+        ul {
+          display: flex;
+          li {
+            padding-left: 20px;
+
+            &:first-of-type {
+              padding-left: 0;
+            }
+            a {
+              font-size: 16px;
+              @include pc {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+
+      .sp-nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 47, 175, 0.5);
+        display: flex;
+        flex-direction: column;
+        transition: 0.3s;
+        z-index: 10;
+        .menu-list {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &:hover {
+            background-color: rgba(242, 243, 242, 0.5);
+            transition: 0.3s;
+            cursor: pointer;
+          }
+          a {
+            font-size: 22px;
+            font-weight: bold;
+            text-shadow: 0 0 7px rgba(0, 0, 0, 0.75);
+            &:hover {
+              color: #333;
+              text-shadow: none;
+            }
+          }
+        }
+        &.open {
+          position: absolute;
+          right: 0;
+        }
+      }
+
+      .hamburger {
+        position: relative;
+        margin-left: auto;
+        background-color: transparent;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 15;
+
+        @include tab {
+          display: none;
+        }
+
+        .btn-line {
+          width: 100%;
+          height: 4px;
+          position: relative;
+          border-radius: 8px;
+          background-color: #fff;
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
+          transition: 0.2s;
+          &::before,
+          &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
+
+            transition: 0.2s;
+            border-radius: 8px;
+          }
+          &::before {
+            transform: translateY(-12px);
+          }
+          &::after {
+            transform: translateY(12px);
+          }
+          &.open {
+            background-color: transparent;
+            box-shadow: none;
+            &::before,
+            &::after {
+              display: block;
+              content: "";
+              transition: 0.2s;
+            }
+            &::before {
+              transform: rotate(45deg);
+            }
+            &::after {
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+    .header-texts {
+      width: 100%;
+      color: #fff;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+
+      .header-title {
+        font-size: 40px;
+        padding-bottom: 1.2px;
+        @include tab {
+          font-size: 64px;
+        }
+        @include pc {
+          font-size: 82px;
+        }
+      }
+      .header-sub-title {
+        font-size: 16px;
+        @include tab {
+          font-size: 20px;
+          @include pc {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.profile-wrapper {
+  width: 100%;
+  @include tab {
+    display: flex;
+  }
+  .profile-icon {
+    width: 65%;
+    margin: 0 auto;
+    @include tab {
+      width: 386px;
+      margin-right: 106px;
+    }
+
+    &.fadein {
+      transition-delay: 100ms;
+      @include pc {
+        transition-delay: 200ms;
+      }
+    }
+    img {
+      border: 1px solid #000083;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .profile-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+    @include tab {
+      width: 468px;
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    &.fadein {
+      transition-delay: 200ms;
+      @include pc {
+        transition-delay: 400ms;
+      }
+    }
+    h3 {
+      text-align: center;
+      @include tab {
+        margin-top: 16px;
+        text-align: left;
+      }
+    }
+    p {
+      margin: 24px 0;
+      @include tab {
+        margin: 32px 0;
+      }
+    }
+    .link-menu {
+      .twitter-link, .blog-link {
+        margin-bottom: 16px;
+      }
+      span {
+        padding-left: 8px;
+      }
+      .fa-twitter,
+      .fa-wordpress, .fa-github {
+        font-size: 22px;
+        vertical-align: middle;
+        @include tab {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+.service-wrapper {
+  @include tab {
+    width: 100%;
+    display: flex;
+  }
+  .service-content {
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    background-color: #000;
+    @include tab {
+      width: 304px;
+    }
+    .content-img {
+      @include tab {
+        height: 200px;
+      }
+    }
+    .content-img img {
+      @include tab {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .content-texts {
+      color: #fff;
+      text-shadow: 0 0 3px rgba(51, 51, 51, 0.6);
+      padding: 16px;
+      @include tab {
+        padding: 15px 8px;
+      }
+      h3 {
+        font-size: 18px;
+        text-align: center;
+      }
+      p {
+        padding-top: 15px;
+      }
+    }
+  }
+  .service-content01,
+  .service-content02 {
+    margin-bottom: 40px;
+    @include tab {
+      margin: 0 24px 0 0;
+    }
+  }
+}
+.works {
+  background-color: #000;
+  position: relative;
+  .section-title {
+    color: #fdcc0c;
+    &::before {
+      background-color: #fdcc0c;
+    }
+    .section-sub-title {
+      color: #fff;
+    }
+  }
+  .swiper-area {
+    width: 100%;
+    .swiper {
+      .swiper-wrapper {
+        background-color: transparent;
+        padding: 0;
+        .swiper-slide {
+          background-color: $main-g;
+          height: auto;
+          border: 1px solid $main-b;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-bottom: 24px;
+          @include tab {
+            padding-bottom: 32px;
+          }
+          .slide-texts {
+            display: flex;
+            flex-direction: column;
+            padding: 24px 8px 0;
+            @include tab {
+              padding: 40px 12px 0;
+            }
+            h3 {
+              font-size: 18px;
+              text-align: center;
+              color: #000;
+              text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+              @include tab {
+                font-size: 24px;
+              }
+              @include pc {
+                font-size: 32px;
+              }
+            }
+            p {
+              padding: 16px 0;
+            }
+            .basic {
+              font-size: 14px;
+              line-height: 1.76;
+              color: #000;
+              @include tab {
+                font-size: 16px;
+              }
+              .basic-user-name,
+              .basic-user-pass {
+                display: flex;
+                dt {
+                  margin-right: 24px;
+                }
+              }
+            }
+            .swiper-slide-detail {
+              font-size: 14px;
+              line-height: 1.76;
+              color: #000;
+              @include tab {
+                font-size: 16px;
+              }
+              .swiper-slide-detail-name,
+              .swiper-slide-detail-period {
+                display: flex;
+                dt {
+                  margin-right: 24px;
+                }
+              }
+            }
+          }
+          a {
+            display: inline-block;
+            font-weight: bold;
+          }
+          .works-page {
+            margin-top: auto;
+          }
+        }
+        .swiper-slide05 {
+          .basic {
+            margin-bottom: 16px;
+            @include tab {
+              margin-bottom: 24px;
+            }
+          }
+        }
+      }
+    }
+    .swiper-pagination {
+      position: absolute;
+      bottom: calc(26px - 9.2px);
+      @include pc {
+        bottom: calc(60px - 9.2px);
+      }
+      .swiper-pagination-bullet {
+        background-color: #fff;
+        &-active {
+          background-color: #007aff;
+        }
+      }
+    }
+  }
+}
+
+.skill-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0;
+  @include tab {
+    flex-direction: row;
+    justify-content: stretch;
+    flex-wrap: wrap;
+  }
+
+  .skill-content {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid $main-f;
+    background-color: #fff;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.7);
+    padding: 16px;
+    margin-bottom: 40px;
+    @include tab {
+      width: 31.25%;
+      margin-bottom: 30px;
+    }
+    &:nth-of-type(4) {
+      @include tab {
+        margin-bottom: 0;
+      }
+    }
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+    h3 {
+      padding-top: 32px;
+    }
+  }
+  .skill-content:not(:nth-child(3n + 3)) {
+    @include tab {
+      margin-right: 3.125%;
+    }
+  }
+}
+.contact {
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .contact-content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 56px;
+      label {
+        line-height: 1;
+        padding-bottom: 18px;
+        font-size: 14px;
+        font-weight: bold;
+        @include tab {
+          font-size: 18px;
+        }
+        .label-texts {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          .label-text {
+            width: 125px;
+            @include tab {
+              width: 165px;
+            }
+          }
+          .label-mark {
+            color: #fff;
+            background-color: $main-b;
+            width: 60px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            @include tab {
+              width: 80px;
+            }
+          }
+        }
+      }
+      input,
+      textarea {
+        padding: 12px;
+        border: 1px solid $main-f;
+        @include tab {
+          padding: 20px;
+        }
+      }
+    }
+
+    .contact-btn {
+      margin-bottom: 0;
+      width: 100%;
+      border: 1px solid $main-f;
+      padding: 12px 0;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      background-color: $main-g;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 1;
+      @include tab {
+        padding: 25px 0;
+        font-size: 18px;
+      }
+    }
+  }
+  .end-message,
+  .false-message {
+    display: none;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+footer {
+  background-color: $main-b;
+  height: 60px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  small {
+    font-size: 12px;
+    @include tab {
+      font-size: 14px;
+    }
+  }
+  @include tab {
+    height: 80px;
+  }
+}

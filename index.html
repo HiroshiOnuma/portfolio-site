@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name=“robots” content=“noindex”>
+  <link rel="stylesheet" href="css/reset.css" class="css" type="text/css">
+  <link rel="stylesheet" href="css/style.css" class="css" type="text/css">
+  <link rel="stylesheet" href="css/style.scss" class="css" type="text/scss">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <title>My Portfolio</title>
+</head>
+
+<body>
+  <header class="header" id="header">
+    <div class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-bg"></div>
+      <div class="hero-bg"></div>
+      <div class="hero-bg"></div>
+      <div class="header-inner">
+        <div class="container">
+          <div class="header-logo">
+            <a href="#">My Portfolio</a>
+          </div>
+          <button class="btn hamburger">
+            <span class="btn-line"></span>
+          </button>
+          <nav class="header-nav sp-nav">
+            <ul class="nav-menu sp-nav-menu">
+              <li class="menu-list"><a href="#header">ホーム</a></li>
+              <li class="menu-list"><a href="#profile">プロフィール</a></li>
+              <li class="menu-list"><a href="#service">できる事</a></li>
+              <li class="menu-list"><a href="#works">制作実例</a></li>
+              <li class="menu-list"><a href="#contact">お問い合わせ</a></li>
+            </ul>
+          </nav>
+          <nav class="header-nav pc-nav">
+            <ul class="nav-menu pc-nav-menu">
+              <li><a href="#header">ホーム</a></li>
+              <li><a href="#profile">プロフィール</a></li>
+              <li><a href="#service">できる事</a></li>
+              <li><a href="#works">制作実例</a></li>
+              <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="header-texts">
+        <h1 class="header-title">My Portfolio</h1>
+        <p class="header-sub-title">ヒロシのポートフォリオサイト</p>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="profile fadein" id="profile">
+      <div class="container">
+        <h2 class="section-title">Profile<span class="section-sub-title">自己紹介</span></h2>
+        <div class="wrapper profile-wrapper fadein">
+          <div class="profile-icon fadein">
+            <img src="img/Hiroshi-icon.jpg" alt="">
+          </div>
+          <div class="profile-content fadein">
+            <h3>Hiroshi</h3>
+            <p>
+              当ポートフォリオサイトを見て頂き、ありがとうございます。<br>2020年から独学でプログラミンング学習を始め、Webに関係する様々な知識を増やしてきました。<br>現在は、会社員とWeb制作関連の仕事を兼業しています。
+            </p>
+            <div class="link-menu fadein">
+              <a href="https://www.twitter.com/hiroshi21363488" target="_blank" class="fadein twitter-link"><i
+                  class="fab fa-twitter"></i><span>Twitter</span></a>
+              <a href="https://www.hiroshinopage.com" target="_blank" class="fadein blog-link"><i
+                  class="fab fa-wordpress"></i><span>ブログ</span></a>
+              <a href="https://github.com/HiroshiOnuma" target="_blank" class="fadein"><i class="fab fa-github"></i><span>GitHub</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="service fadein" id="service">
+      <div class="container">
+        <h2 class="section-title">Service<span class="section-sub-title">できる事</span></h2>
+        <div class="wrapper service-wrapper fadein">
+          <div class="service-content service-content01 fadein">
+            <div class="content-img">
+              <img src="img/carousel-1684591_1280 .png" alt="">
+            </div>
+            <div class="content-texts">
+              <h3 class="service-show-title">設計・デザイン</h3>
+              <p class="service-show-message">ウェブサイトの元になるワイヤーフレームから,
+                見た目のデザインまで制作致します。</p>
+            </div>
+          </div>
+          <div class="service-content service-content02 fadein">
+            <div class="content-img">
+              <img src="img/laptop-g549a6d612_1280.jpg" alt="">
+            </div>
+            <div class="content-texts">
+              <h3 class="service-show-title">コーディング</h3>
+              <p class="service-show-message">デザインデータの見た目通りにコーディングを致します。<br>CSS
+                jQueryによってアニメーションを付けたり、レスポンシブウェブデザインの対応もお任せください。</p>
+            </div>
+          </div>
+          <div class="service-content service-content03 fadein">
+            <div class="content-img">
+              <img src="img/mockup-g28d43cafc_1280.jpg" alt="">
+            </div>
+            <div class="content-texts">
+              <h3 class="service-show-title">ホームページ制作</h3>
+              <p class="service-show-message">デザイン コーディング WordPress導入 サーバーへのアップロード等、オリジナルのWebサイトを制作致します。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="works fadein" id="works">
+      <div class="container">
+        <h2 class="section-title">Works<span class="section-sub-title">制作実例</span></h2>
+      </div>
+      <div class="swiper-area">
+        <div class="swiper">
+          <div class="wrapper swiper-wrapper">
+            <div class="swiper-slide swiper-slide01">
+              <div class="slide-img">
+                <img src="img/works-img04.png" alt="">
+              </div>
+              <div class="slide-texts">
+                <h3 class="works-title">制作実例1</h3>
+                <p><a href="https://note.com/samuraibrass"
+                    target="_blank">Shogo(しょーごログ運営)さん</a>のNOTEでのXDデザインカンプからコーディングをしたものになります。<br>レスポンシブ対応済みです。</p>
+                <dl class="basic">
+                  <div class="basic-user-name">
+                    <dt>BASIC認証ユーザー名:</dt>
+                    <dd>hiroshidesu</dd>
+                  </div>
+                  <div class="basic-user-pass">
+                    <dt>BASIC認証パスワード:</dt>
+                    <dd>1983-hiroshidesu</dd>
+                  </div>
+                </dl>
+              </div>
+              <a href="https://my-portfolio-site.online//the-junior-class-ex/" target="_blank"
+                class="works-page">作成したページ</a>
+            </div>
+            <div class="swiper-slide swiper-slide02">
+              <div class="slide-img">
+                <img src="img/works-img05.png" alt="">
+              </div>
+              <div class="slide-texts">
+                <h3 class="works-title">制作実例2</h3>
+                <p><a href="https://note.com/samuraibrass"
+                    target="_blank">Shogo(しょーごログ運営)さん</a>のNOTEでのXDデザインカンプからコーディングをしたものになります。<br>レスポンシブ対応,お問い合わせフォーム共に実装済みです。
+                </p>
+                <dl class="basic">
+                  <div class="basic-user-name">
+                    <dt>BASIC認証ユーザー名:</dt>
+                    <dd>hiroshidayo</dd>
+                  </div>
+                  <div class="basic-user-pass">
+                    <dt>BASIC認証パスワード:</dt>
+                    <dd>hiroshi-1983</dd>
+                  </div>
+                </dl>
+              </div>
+              <a href="https://my-portfolio-site.online/Intermediate/" target="_blank" class="works-page">作成したページ</a>
+            </div>
+            <div class="swiper-slide swiper-slide03">
+              <div class="slide-img">
+                <img src="img/works-img06.png" alt="">
+              </div>
+              <div class="slide-texts">
+                <h3 class="works-title">制作実例3</h3>
+                <p><a href="https://note.com/samuraibrass"
+                    target="_blank">Shogo(しょーごログ運営)さん</a>のNOTEでのXDデザインカンプからコーディングをした全3ページの旅館サイトです。<br>レスポンシブ対応,予約フォームなど実装済みです。
+                </p>
+                <dl class="basic">
+                  <div class="basic-user-name">
+                    <dt>BASIC認証ユーザー名:</dt>
+                    <dd>hiroshi</dd>
+                  </div>
+                  <div class="basic-user-pass">
+                    <dt>BASIC認証パスワード:</dt>
+                    <dd>0058-hiroshi</dd>
+                  </div>
+                </dl>
+              </div>
+              <a href="https://my-portfolio-site.online/intermediate-ex/" target="_blank" class="works-page">作成したページ</a>
+            </div>
+
+            <div class="swiper-slide swiper-slide04">
+              <div class="slide-img">
+                <img src="img/advanced.png" alt="">
+              </div>
+              <div class="slide-texts">
+                <h3 class="works-title">制作実例4</h3>
+                <p><a href="https://note.com/samuraibrass"
+                    target="_blank">Shogo(しょーごログ運営)さん</a>のNOTEでのXDデザインカンプからコーディングをした全9ページの英会話スクールのサイトです。<br>WordPressにて制作し、
+                  Topの事例部分と料金部分はカスタムフィールドでクライアント様からも変更しやすくしており、
+                  お知らせ部分はカスタム投稿タイプで対応しました。
+                  記事ページでは関連記事やおすすめ記事を実装し、SNS共有も対応しています。
+                  お問合せフォームでの自動返信メール設定もしています。
+                </p>
+                <dl class="basic">
+                  <div class="basic-user-name">
+                    <dt>BASIC認証ユーザー名:</dt>
+                    <dd>wp-coding</dd>
+                  </div>
+                  <div class="basic-user-pass">
+                    <dt>BASIC認証パスワード:</dt>
+                    <dd>0000-hiroshi</dd>
+                  </div>
+                </dl>
+              </div>
+              <a href="http://hiroshionuma.conohawing.com/" target="_blank" class="works-page">作成したページ</a>
+            </div>
+
+            <div class="swiper-slide swiper-slide05">
+              <div class="slide-img">
+                <img src="img/wp-customize .png" alt="">
+              </div>
+              <div class="slide-texts">
+                <h3 class="works-title">制作実例5</h3>
+                <p>英会話スクールのウェブサイトを制作致しました。
+                  クライアント様とのヒアリング、サイト構成などのディレクション業務から、サーバー、ドメイン、WordPress導入、サイト公開まで全て対応致しました。
+                  WordPressテーマlightningのカスタマイズで実装しています。
+                  クライアント様とお知り合いの方々から（分かりやすい、透明感が良い）などの絶賛のお声も頂いております。
+                </p>
+                <dl class="swiper-slide-detail">
+                  <div class="swiper-slide-detail-name">
+                    <dt>企業名:</dt>
+                    <dd>子ども英語教室フォニックスクラブ</dd>
+                  </div>
+                  <div class="swiper-slide-detail-period">
+                    <dt>制作期間:</dt>
+                    <dd>4週間</dd>
+                  </div>
+                </dl>
+
+              </div>
+              <a href="https://phonicsclub-machida.com/" target="_blank" class="works-page">子ども英語教室-Phonics Club</a>
+            </div>
+
+            <div class="swiper-slide swiper-slide06">
+              <div class="slide-img">
+                <img src="img/wp-cafe.png" alt="">
+              </div>
+              <div class="slide-texts">
+                <h3 class="works-title">制作実例6</h3>
+                <p>架空カフェのウェブサイトを制作致しました。
+                  サイト設計やワイヤーフレーム作成、デザイン、コーディング、WordPress導入、サイト公開まで全て対応致しました。
+                  WordPressオリジナルテーマにて制作致しており、
+                  今回は、ローカル環境から本番環境へ移行させるにあたり、プラグインを使わずに、FTPソフトやサーバー上での操作で完了させた事も今回の強みです。
+                </p>
+                <dl class="swiper-slide-detail">
+                  <div class="swiper-slide-detail-name">
+                    <dt>企業名:</dt>
+                    <dd>Wp-Cafe</dd>
+                  </div>
+                  <div class="swiper-slide-detail-period">
+                    <dt>制作期間:</dt>
+                    <dd>1ヶ月</dd>
+                  </div>
+                </dl>
+
+              </div>
+              <a href="https://Wp-cafe.my-portfolio-site.online/" target="_blank" class="works-page">Wp-Cafe</a>
+            </div>
+
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <section class="skill fadein" id="skill">
+      <div class="container">
+        <h2 class="section-title">Skill<span class="section-sub-title">技術</span></h2>
+        <div class="wrapper skill-wrapper fadein">
+          <div class="skill-content fadein">
+            <img
+              src="img/kisspng-html-web-development-responsive-web-design-bootstr-5af71a42c55ca0.2298363615261435548084.png"
+              alt="">
+            <h3>HTML/CSS</h3>
+          </div>
+          <div class="skill-content fadein">
+            <img
+              src="img/kisspng-javascript-logo-html-clip-art-javascript-logo-5b5188b1a2a1f9.2428698915320700656662.png"
+              alt="">
+            <h3>JavaScript</h3>
+          </div>
+          <div class="skill-content fadein">
+            <img src="img/kisspng-jquery-ui-javascript-web-browser-pasargad-5b3d093861de42.8633010915307267124009.png"
+              alt="">
+            <h3>jQuery</h3>
+          </div>
+          <div class="skill-content fadein">
+            <img src="img/kisspng-node-js-javascript-software-developer-express-js-c-node-js-5b4bc172b6aa80.4777337515316913787482.png"
+              alt="">
+            <h3>Node.js</h3>
+          </div>
+          <div class="skill-content fadein">
+            <img src="img/kisspng-wordpress-logo-theme-5aec5a4793a276.1615702515254390476047のコピー.png" alt="">
+            <h3>WordPress</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact fadein" id="contact">
+      <div class="container">
+        <h2 class="section-title contact-title">Contact<span class="section-sub-title">お問い合わせ</span></h2>
+        <form class="contact-wrapper fadein"
+          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeZVmvY7kLaQkTnv8RgeOtdTO0GpeQW7pQMt9jPql1JUwcsfQ/formResponse"
+          target="_self" method="POST" id="form">
+
+          <div class="contact-content contact-name">
+            <label for="name">
+              <div class="label-texts">
+                <span class="label-text">お名前 :</span>
+                <div class="label-mark">
+                  <p>必須</p>
+                </div>
+              </div>
+            </label>
+            <input type="text" id="name" name="entry.1891384694" required>
+          </div>
+          <div class="contact-content contact-email">
+            <label for="email">
+              <div class="label-texts">
+                <span class="label-text">メールアドレス :</span>
+                <div class="label-mark">
+                  <p>必須</p>
+                </div>
+              </div>
+            </label>
+            <input type="email" id="email" name="entry.2038070834" required>
+          </div>
+          <div class="contact-content contact-message">
+            <label for="message">
+              <div class="label-texts">
+                <span class="label-text">お問い合わせ内容 :</span>
+                <div class="label-mark">
+                  <p>必須</p>
+                </div>
+              </div>
+            </label>
+            <textarea name="entry.1245164714" id="message" cols="30" rows="10" required></textarea>
+          </div>
+          <button class="contact-content contact-btn">送信する</button>
+        </form>
+        <p class="end-message">お問い合わせありがとうございます。</p>
+        <p class="false-message">送信できませんでした。</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p><small>© My Portfolio 2021</small></p>
+  </footer>
+  <script src="jquery.min.js"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="js/portfolio.js"></script>
+</body>
+
+</html>
